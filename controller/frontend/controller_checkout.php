@@ -19,8 +19,7 @@
 				}
 				//insert thong tin vao bang tbl_order, sau do lay id vua insert
 				$customer_id = $_SESSION["customer_id"];
-				$order_id = $this->model->execute("insert into tbl_order(customer_id,ngaymua,gia) values($customer_id,now(),$gia)");
-
+				$order_id = $this->model->execute("insert into tbl_order(customer_id, ngaymua, gia, address_c, mobile_c, name_c) values($customer_id, now(), $gia, '$diachinhan', '$sodienthoai', '$tennguoinhan')");
 
 				//insert thong tin vao bao tbl_order_detail
 				//duyet cac san pham, sau do insert vao bao tbl_order_detail
@@ -28,12 +27,14 @@
 				foreach($_SESSION["cart"] as $product){
 					$fk_product_id = $product["pk_product_id"];
 					$c_number = $product["number"];
-					$this->model->execute("insert into tbl_order_detail(order_id,fk_product_id,c_number) values($order_id,$fk_product_id,$c_number)");
+					$this->model->execute("insert into tbl_order_detail(order_id, fk_product_id, c_number) values($order_id, $fk_product_id, $c_number)");
 				}
 				//xoa gio hang
 				$_SESSION['cart'] = array();
 				
-				echo("<script>location.href = 'index.php?controller=cart&alert=success';</script>");
+//				echo("<script>location.href = 'index.php?controller=cart&alert=success';</script>");
+                include "view/frontend/view_checkout.php";
+
 			}				
 		}		
 	}
