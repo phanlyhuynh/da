@@ -52,10 +52,26 @@
             <?php echo number_format($this->cart_total()) ?>₫ <br>
               <form action="index.php?controller=checkout" method="post">
                   <input type="hidden" name="token" value="{{ form_token() }}" />
-                  <input name="tennguoinhan" placeholder="Ten nguoi nhan"/>
-                  <input name="sodienthoai" placeholder="sodienthoai" />
-                  <input name="diachinhan" placeholder="diachinhan" />
-                  <button type="submit">Thanh toan</button>
+                  <input name="tennguoinhan" placeholder="Tên người nhận" style="font-size: 12px; width: 300px; height: 30px; border: 1px solid #77ca64;"/>
+                  <br><br>
+                  <input name="sodienthoai" placeholder="Số điện thoại" style="font-size: 12px; width: 300px; height: 30px; border: 1px solid #77ca64;"/>
+                  <br><br>
+                  <input name="diachinhan" placeholder="Địa chỉ nhận" style="font-size: 12px; width: 300px; height: 30px; border: 1px solid #77ca64;"/>
+                  <br><br>
+                  <button type="submit"
+                      style="color: #fff;
+                        outline: none;
+                        text-decoration: none;
+                        border: 0;
+                        background: #77ca64;
+                        text-transform: uppercase;
+                        line-height: 12px;
+                        padding: 15px 30px;
+                        display: inline-block;
+                        font-weight: 300;
+                        border-radius: 3px;
+                        font-size: 13px;
+                        ">Thanh toán</button>
               </form>
 <!--            <a href="index.php?controller=checkout" class="button black">Thanh toán</a> </div>-->
             <?php } ?>
