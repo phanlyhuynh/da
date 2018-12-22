@@ -31,9 +31,10 @@
 				}
 				//xoa gio hang
 				$_SESSION['cart'] = array();
-				
-//				echo("<script>location.href = 'index.php?controller=cart&alert=success';</script>");
-                include "view/frontend/view_checkout.php";
+                echo "<script type='text/javascript'>alert('Bạn đã thanh toán thành công');</script>";
+				echo("<script>location.href = 'index.php?controller=cart&alert=success';</script>");
+
+//                include "view/frontend/view_checkout.php";
 
 			}				
 		}		
