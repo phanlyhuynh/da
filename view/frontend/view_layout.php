@@ -50,8 +50,8 @@
 <div class="top-header">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-sm-6 col-md-6"> <span><i class="fa fa-phone"></i> (04) 6674 2332</span> <span><i class="fa fa-envelope-o"></i> <a href="mailto:support@mail.com">support@mail.com</a></span> </div>
-      <div class="col-xs-12 col-sm-6 col-md-6 customer">
+      <div class="col-xs-12 col-sm-6 col-md-6"> <span><i class="fa fa-phone"></i> (04) 6674 2332</span> <span><i class="fa fa-envelope-o"></i> <a href="mailto:support@mail.com">buithuytrang@mail.com</a></span> </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 customer"> 
       <?php if(isset($_SESSION["email"])){ ?>
       Xin chào <a href="index.php?controller=history_order&&cid=<?php echo $_SESSION["customer_id"];?>" style="color: red;"><?php echo $_SESSION["email"] ?></a>&nbsp;&nbsp;&nbsp;<a href="index.php?controller=login&act=logout">Đăng xuất</a>
       <?php }else{ ?>
@@ -66,7 +66,7 @@
 <div class="mid-header">
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-3 logo "> <a href="index.html"> <img src="public/frontend/100/047/633/themes/517833/assets/logo221b.png?1481775169361" alt="DKT Store" title="DKT Store" class="img-responsive"> </a> </div>
+    <div class="col-xs-12 col-sm-12 col-md-3 logo "> <a href="index.php"> <img src="public/frontend/100/047/633/themes/517833/assets/logo221b.png?1481775169361" alt="DKT Store" title="DKT Store" class="img-responsive"> </a> </div>
     <div class="col-xs-12 col-sm-12 col-md-6 header-search"> 
       <script type="text/javascript">
          function search(){
