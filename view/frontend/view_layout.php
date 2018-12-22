@@ -53,7 +53,7 @@
       <div class="col-xs-12 col-sm-6 col-md-6"> <span><i class="fa fa-phone"></i> (04) 6674 2332</span> <span><i class="fa fa-envelope-o"></i> <a href="mailto:support@mail.com">buithuytrang@mail.com</a></span> </div>
       <div class="col-xs-12 col-sm-6 col-md-6 customer"> 
       <?php if(isset($_SESSION["email"])){ ?>
-      Xin chào <?php echo $_SESSION["email"] ?>&nbsp;&nbsp;&nbsp;<a href="index.php?controller=login&act=logout">Đăng xuất</a>
+      Xin chào <a href="index.php?controller=history_order&&cid=<?php echo $_SESSION["customer_id"];?>" style="color: red;"><?php echo $_SESSION["email"] ?></a>&nbsp;&nbsp;&nbsp;<a href="index.php?controller=login&act=logout">Đăng xuất</a>
       <?php }else{ ?>
       <a href="index.php?controller=login"><i class="fa fa-user"></i> Đăng nhập</a> <a href="index.php?controller=register"><i class="fa fa-user-plus"></i> Đăng ký</a> 
       <?php } ?>
