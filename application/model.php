@@ -34,5 +34,6 @@
 			$query = mysqli_query($conn,$sql);
 			return mysqli_num_rows($query);
 		}
+		
 	}
  ?>

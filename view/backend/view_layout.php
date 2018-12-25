@@ -4,6 +4,8 @@
 	<title>Admin page</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="public/backend/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script type="text/javascript" src="public/backend/ckeditor/ckeditor.js"></script>
 </head>
 <body>
@@ -20,7 +22,7 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#" class="active">Home</a></li>
+            <li class="active"><a href="admin.php?controller=stat" class="active">Home</a></li>
             <li class="active"><a href="admin.php?controller=category_product">Danh mục sản phẩm</a></li>
             <li class="active"><a href="admin.php?controller=product">Danh sách sản phẩm</a></li>
             <li class="active"><a href="admin.php?controller=order">Danh sách đơn hàng</a></li>
