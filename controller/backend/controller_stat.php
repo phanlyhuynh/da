@@ -27,6 +27,11 @@
 			foreach ($products as $key => $value) {
 				$productcount++;
 			}
+			$prod = $this->model->fetch("SELECT x.c_name as name, MAX(x.count) as count FROM ( SELECT c_name, count(*) as count FROM tbl_order_detail INNER JOIN tbl_product ON tbl_order_detail.fk_product_id=tbl_product.pk_product_id GROUP BY tbl_product.pk_product_id ) x");
+			foreach ($prod as $key => $value) {
+				$nameproduct = $value["name"];
+				$countproduct = $value["count"];
+			}
 			//load view
 			include "view/backend/view_stat.php";
 		}
